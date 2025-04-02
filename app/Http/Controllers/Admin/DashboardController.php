@@ -11,4 +11,9 @@ class DashboardController extends Controller
     {
         return "Dashboard";
     }
+
+    public function profile()
+    {
+        return "Profile";
+    }
 }

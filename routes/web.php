@@ -23,6 +23,7 @@ Route::middleware(["auth", "verified"])
     ->prefix("admin")
     ->group(function () {
         Route::get("/", [DashboardController::class, "index"]);
+        Route::get("/profile", [DashboardController::class, "profile"]);
     });
 
 require __DIR__ . '/auth.php';
