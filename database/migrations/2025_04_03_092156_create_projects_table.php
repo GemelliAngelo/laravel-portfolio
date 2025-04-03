@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
 
             $table->string("name");
-            $table->string("client");
-            $table->date("woked_on_date");
+            $table->string("client")->nullable();
+            $table->date("worked_on_date");
             $table->string("content");
 
             $table->timestamps();
