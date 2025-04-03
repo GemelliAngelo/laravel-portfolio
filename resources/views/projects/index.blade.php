@@ -11,6 +11,7 @@
                 <th>Cliente</th>
                 <th>Periodo</th>
                 <th>Riassunto</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -24,6 +25,7 @@
                     </td>
                     <td>{{$project->worked_on_date}}</td>
                     <td>{{$project->content}}</td>
+                    <td><a href="{{route("projects.show", $project)}}">Visualizza</a></td>
                 </tr>
             @endforeach                
         </tbody>
