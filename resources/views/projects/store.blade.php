@@ -4,7 +4,8 @@
 
 @section('content')
     
-    <form class="bg-secondary p-5" action="{{route("projects.store")}}" method="post">
+    <form class="bg-secondary p-5" action="{{route("projects.store")}}" method="POST">
+        @csrf
 
         <div class="form-control bg-body-tertiary mb-4">
             <label class="form-label" for="name">Nome</label>
