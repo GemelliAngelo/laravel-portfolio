@@ -56,17 +56,26 @@ class ProjectController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Project $project)
     {
-        //
+        return view("projects.update", compact("project"));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Project $project)
     {
-        //
+        $data = $request->all();
+
+        $project->name = $data["name"];
+        $project->client = $data["client"];
+        $project->worked_on_date = $data["worked_on_date"];
+        $project->content = $data["content"];
+
+        $project->update();
+
+        return redirect()->route("projects.show", $project);
     }
 
     /**

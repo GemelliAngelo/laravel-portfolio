@@ -15,7 +15,7 @@
                 <th>Cliente</th>
                 <th>Periodo</th>
                 <th>Riassunto</th>
-                <th></th>
+                <th colspan="2" ></th>
             </tr>
         </thead>
         <tbody>
@@ -29,7 +29,12 @@
                     </td>
                     <td>{{$project->worked_on_date}}</td>
                     <td>{{$project->content}}</td>
-                    <td><a href="{{route("projects.show", $project)}}">Visualizza</a></td>
+                    <td>
+                            <a class="btn btn-outline-dark" href="{{route("projects.show", $project)}}">Visualizza</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-warning" href="{{route("projects.update", $project)}}">Modifica</a>
+                    </td>
                 </tr>
             @endforeach                
         </tbody>

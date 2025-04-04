@@ -17,6 +17,6 @@
 
     <p>{{$project->content}}</p>
 
-    <a href="{{route("projects.index")}}">Torna Indietro</a>
+    <a href="{{route("projects.index")}}">Tutti i progetti</a>
 
 @endsection
