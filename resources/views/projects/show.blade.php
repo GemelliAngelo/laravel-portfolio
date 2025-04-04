@@ -4,9 +4,14 @@
 
 @section('content')
     
-    <h2>
+    <div class="d-flex justify-content-end">
+        <a href="{{route("projects.edit",$project)}}" class="btn btn-warning">Modifica</a>
+    </div>
+
+    <h2 class="my-3">
         {{$project->client?? "Nessun Cliente"}}
     </h2>
+
 
     <small>{{$project->worked_on_date}}</small>
 

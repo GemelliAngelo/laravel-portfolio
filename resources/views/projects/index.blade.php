@@ -4,6 +4,10 @@
 
 @section('content')
 
+<div class="d-flex my-3 justify-content-end">
+    <a href="{{route("projects.create")}}" class="btn btn-primary">Aggiugni un progetto</a>
+</div>
+
     <table class="table table-secondary">
         <thead>
             <tr>
