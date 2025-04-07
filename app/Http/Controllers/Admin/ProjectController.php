@@ -24,7 +24,9 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view("projects.store");
+        $types = Type::all();
+
+        return view("projects.store", compact("types"));
     }
 
     /**
@@ -33,13 +35,13 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-
         $newProject = new Project;
 
         $newProject->name = $data["name"];
         $newProject->client = $data["client"];
         $newProject->worked_on_date = $data["worked_on_date"];
         $newProject->content = $data["content"];
+        $newProject->type_id = $data["type_id"];
 
         $newProject->save();
 
