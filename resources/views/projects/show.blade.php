@@ -12,15 +12,25 @@
         
     </div>
 
-    <h2 class="my-3">
+    <div class="my-3">
+      <h3>
+        {{$project->type->name}}
+      </h3>
+      
+      <p>{{$project->type->description}}</p>
+    </div>
+    
+    <div class="my-3">
+      <h6>
         {{$project->client?? "Nessun Cliente"}}
-    </h2>
+      </h6>
+      
+      <p>{{$project->content}}</p>
 
-
-    <small>{{$project->worked_on_date}}</small>
-
-    <p>{{$project->content}}</p>
-
+      <small>{{$project->worked_on_date}}</small>
+      
+    </div>
+      
     <a href="{{route("projects.index")}}">Tutti i progetti</a>
 
 

@@ -15,10 +15,11 @@
                 <th>Cliente</th>
                 <th>Periodo</th>
                 <th>Riassunto</th>
+                <th>Tipo</th>
                 <th colspan="2" ></th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="table-group-divider">
             @foreach ($projects as $project)
                 <tr>
                     <td>{{$project->name}}</td>
@@ -27,8 +28,9 @@
                             Nessun Cliente 
                         @endif
                     </td>
-                    <td>{{$project->worked_on_date}}</td>
+                    <td>{{str_replace("-","/",$project->worked_on_date)}}</td>
                     <td>{{$project->content}}</td>
+                    <td>{{$project->type->name}}</td>
                     <td>
                             <a class="btn btn-outline-dark" href="{{route("projects.show", $project)}}">Visualizza</a>
                     </td>
