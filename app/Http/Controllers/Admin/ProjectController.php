@@ -67,8 +67,9 @@ class ProjectController extends Controller
     {
 
         $types = Type::all();
+        $technologies = Technology::all();
 
-        return view("projects.update", compact("project", "types"));
+        return view("projects.update", compact("project", "types", "technologies"));
     }
 
     /**
@@ -84,6 +85,8 @@ class ProjectController extends Controller
         $project->content = $data["content"];
 
         $project->update();
+
+        $project->technologies()->sync($data["technologies"]);
 
         return redirect()->route("projects.show", $project);
     }

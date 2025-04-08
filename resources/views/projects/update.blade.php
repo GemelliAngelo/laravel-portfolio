@@ -20,6 +20,14 @@
                 @endforeach
             </select>
         </div>
+        <div class="form-control bg-body-tertiary mb-4 text-center">
+            @foreach ($technologies as $technology)
+            <div class="form-check form-check-inline">
+                <input type="checkbox" name="technologies[]" value="{{$technology->id}}" id="tag-{{$technology->id}}" {{$project->technologies->contains($technology->id) ? "checked":""}}>
+                <label for="tag-{{$technology->id}}">{{$technology->name}}</label>
+            </div>
+            @endforeach
+        </div>
         <div class="form-control bg-body-tertiary mb-4">
             <label class="form-label" for="client">Cliente</label>
             <input class="form-control" type="text" name="client" id="client" value="{{$project->client}}">
