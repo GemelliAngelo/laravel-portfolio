@@ -24,7 +24,9 @@
                 <tr>
                     <td>{{$project->name}}</td>
                     <td>
-                        @if (!$project->client)
+                        @if ($project->client)
+                            {{ucfirst($project->client)}}
+                        @else
                             Nessun Cliente 
                         @endif
                     </td>

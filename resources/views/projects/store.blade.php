@@ -21,7 +21,7 @@
         <div class="form-control bg-body-tertiary mb-4 text-center">
             @foreach ($technologies as $technology)
             <div class="form-check form-check-inline">
-                <input type="checkbox" name="tag[]" value="{{$technology->id}}" id="tag-{{$technology->id}}">
+                <input type="checkbox" name="technologies[]" value="{{$technology->id}}" id="tag-{{$technology->id}}">
                 <label for="tag-{{$technology->id}}">{{$technology->name}}</label>
             </div>
             @endforeach
