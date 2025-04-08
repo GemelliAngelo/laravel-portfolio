@@ -34,7 +34,7 @@
         </div>
 
         <div class="text-end w-100">
-            <input type="submit" value="Modifica" class="btn btn-warning w-100">
+            <input type="submit" value="Salva" class="btn btn-warning w-100">
         </div>
 
     </form>

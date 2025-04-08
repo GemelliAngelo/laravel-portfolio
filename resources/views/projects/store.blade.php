@@ -3,7 +3,6 @@
 @section('title',"Aggiungi progetto")
 
 @section('content')
-    
     <form class="bg-secondary p-5" action="{{route("projects.store")}}" method="POST">
         @csrf
 
@@ -18,6 +17,14 @@
                     <option value="{{$type->id}}">{{$type->name}}</option>
                 @endforeach
             </select>
+        </div>
+        <div class="form-control bg-body-tertiary mb-4 text-center">
+            @foreach ($technologies as $technology)
+            <div class="form-check form-check-inline">
+                <input type="checkbox" name="tag[]" value="{{$technology->id}}" id="tag-{{$technology->id}}">
+                <label for="tag-{{$technology->id}}">{{$technology->name}}</label>
+            </div>
+            @endforeach
         </div>
         <div class="form-control bg-body-tertiary mb-4">
             <label class="form-label" for="client">Cliente</label>
