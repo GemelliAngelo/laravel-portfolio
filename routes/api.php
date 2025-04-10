@@ -10,3 +10,4 @@ use App\Http\Controllers\Api\ProjectsController;
 
 
 Route::get("projects",[ProjectsController::class, "index"]);
+Route::get("projects/{project}",[ProjectsController::class, "show"]);
