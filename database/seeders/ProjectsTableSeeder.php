@@ -28,7 +28,7 @@ class ProjectsTableSeeder extends Seeder
         $newProject->name = "laravel-comics";
         $newProject->worked_on_date = "2025-03-20";
         $newProject->content = "Generazione di una copia di una pagina di un sito web completa con inserimento di layout e stilizzazione";
-        $newProject->type_id = 1;
+        $newProject->type_id = 5;
 
         $newProject->save();
 

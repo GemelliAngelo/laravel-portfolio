@@ -31,6 +31,10 @@ class TypesTableSeeder extends Seeder
                 'name' => 'Educational',
                 'description' => 'Progetto per apprendimento Laravel',
             ],
+            [
+                'name' => 'Replica',
+                'description' => 'Replica dettagliata di una pagina web esistente'
+            ]
         ];
 
 
